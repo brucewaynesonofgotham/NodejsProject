@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <title>Проект</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- подключаем стили Mocha, для отображения результатов -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+    <!-- подключаем библиотеку Mocha -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+    <!-- настраиваем Mocha: предстоит BDD-тестирование -->
+    <script>
+        mocha.setup('bdd');
+    </script>
+
+    <!-- подключаем chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
+    <!-- в chai есть много всего, выносим assert в глобальную область -->
+    <script>
+        var assert = chai.assert;
+    </script>
+    <title>JS learning system</title>
+</head>
+<body>
+<div class="b-popup" id="popup1">
+    <div class="b-popup-content">
+        <div class="b-popup-text">
+            <p>Зачастую нам надо повторять одно и то же действие во многих частях программы.</p>
+            <p>Например, красиво вывести сообщение необходимо при приветствии посетителя, при выходе посетителя с сайта, ещё
+                где-нибудь.</p>
+            <p>Чтобы не повторять один и тот же код во многих местах, придуманы функции. Функции являются основными «строительными блоками» программы.</p>
+            <p>Пример объявления функции:</p>
+        <pre>
+          function showMessage() {
+            alert( 'Привет всем присутствующим!' );
+          }
+        </pre>
+        </div>
+        <div class="b-popup-btn">
+            <button type="button" class="btn btn-default" onclick="javascript:PopUpHide()">Скрыть</button>
+        </div>
+    </div>
+</div>
+<div class="container img-rounded" id="background1">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="editor" class="img-rounded">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="tasks img-rounded">
+                <p>Цели:</p>
+                <div class="col-md-12">
+                    <div class="tasks-text">
+                        <p>Напишите функцию факториала. В качестве результата выведите 5!;</p>
+                    </div>
+                    <!-- в элементе с id="mocha" будут результаты тестов -->
+                    <div id="mocha" class="col-md-12"></div>
+                </div>
+
+                <div class="clearfix"></div>
+                <br>
+            </div>
+        </div>
+        <div class="tasks-button-next col-md-3">
+            <a href="/task1"  class="btn btn-default" >Предыдущее задание</a>
+        </div>
+        <div class="tasks-button-next col-md-3">
+            <a href="/"  class="btn btn-default" >На главную</a>
+        </div>
+        <div class="theory-button col-md-3">
+            <button type="button" class="btn btn-default" onclick="javascript:PopUpShow()">Теория</button>
+        </div>
+        <div class="check-button col-md-3">
+            <button type="button" class="btn btn-default" onclick="mocha.run();">Проверить</button>
+        </div>
+    </div>
+    <iframe style="width: 100%; padding: 10px; border: none; visibility:hidden;"></iframe>
+</div>
+<script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+<script src="/js/pop-up.js"></script>
+<script src="https://cdn.jsdelivr.net/g/ace@1.2.3(min/ace.js+min/ext-emmet.js+min/mode-html.js)" charset="UTF-8" type="text/javascript"></script>
+<script src="/js/ace.js"></script>
+<script src="/js/goToPage.js"></script>
+
+<script>
+    function factorial(n) {
+        return (n != 1) ? n * factorial(n - 1) : 1;
+    }
+</script>
+
+<!-- в этом скрипте находятся спеки -->
+<script src="/js/testForTask2.js"></script>
+
+</body>
+</html>

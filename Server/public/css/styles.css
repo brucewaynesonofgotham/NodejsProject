@@ -1,0 +1,159 @@
+@import url(https://fonts.googleapis.com/css?family=Russo+One&subset=latin,cyrillic);
+html , body {
+    background-color: #747a7f;
+    width:100%;
+    height: 100%;
+}
+
+.row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.row > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    min-height:100%;
+    width:50%;
+    margin: 0 auto;
+    background-color: #747a7f;
+}
+.matrix {
+    min-height: 320px;
+    background-color: #ffffff;
+}
+
+.matrix img {
+    margin: 15%;
+    width:70%;
+    height: 60%;
+}
+
+.matrix p {
+    padding-top: 5%;
+    padding-left: 5%;
+    font-family: 'Russo One', sans-serif;
+}
+
+
+.tasks {
+    background-color: #ffffff;
+    min-height: 300px;
+}
+
+.tasks p {
+    padding-top: 10px;
+    padding-left: 10px;
+    font-family: 'Russo One', sans-serif;
+}
+.tasks button {
+    margin-left: 10%;
+}
+
+.tasks-button {
+    position: absolute;
+    margin-top: 10px;
+}
+
+
+.tasks-text p {
+    font-family: Arial;
+    font-size: 17px;
+}
+
+.theory-button {
+    margin-top: 10px;
+}
+
+.tasks-button-next {
+    margin-top: 10px;
+}
+
+.check-button {
+    margin-top: 10px;
+}
+
+#editor {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    min-height: 320px;
+    z-index: 1;
+}
+
+#mocha {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    min-height: 100px;
+}
+
+.b-popup{
+    width:100%;
+    min-height:100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow:hidden;
+    position:fixed;
+    top:0px;
+}
+.b-popup .b-popup-content{
+    margin:150px auto 0px auto;
+    width:800px;
+    height: 100%;
+    min-height: 345px;
+    padding:10px;
+    background-color: #c5c5c5;
+    border-radius:5px;
+    box-shadow: 0px 0px 10px #000;
+}
+
+.b-popup-text{
+    min-height: 200px;
+    padding: 10px;
+}
+
+.b-popup-btn{
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: right;
+}
+
+#popup1 {
+    z-index: 2;
+}
+
+#background1 {
+    z-index: 1;
+}
+
+img{
+    width:100%;
+}
+
+.introduce p {
+    padding-top: 10px;
+    padding-left: 10px;
+    font-family: 'Russo One', sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    left: 50%;
+}
